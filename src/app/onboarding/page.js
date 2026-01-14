@@ -26,7 +26,7 @@ export default function Onboarding({ onComplete }) {
 
     try {
       // 2. Send to Server (Replace URL with your backend endpoint)
-      const response = await fetch('https://your-api-endpoint.com/onboard', {
+      const response = await fetch('http://127.0.0.1:8000/formData', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: payload,
