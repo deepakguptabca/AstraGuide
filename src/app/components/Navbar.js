@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Compass, BookOpen, Rocket, Menu, X, Github } from 'lucide-react';
+import Onboarding from '../onboarding/page';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +16,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-4 left-0 right-0 z-50 mx-auto max-w-6xl px-4 font-sans">
+    <nav className="relative top-2 py-4 left-0 right-0 z-50 mx-auto max-w-6xl px-4 font-sans">
       <div className="rounded-2xl border border-white/10 bg-black/60 backdrop-blur-md shadow-2xl transition-all duration-300">
         <div className="flex h-16 items-center justify-between px-6">
           
@@ -50,9 +51,11 @@ const Navbar = () => {
             <Link href="https://github.com" className="text-gray-400 hover:text-white transition-colors">
               <Github size={20} />
             </Link>
-            <button className="relative inline-flex items-center justify-center rounded-full bg-white px-6 py-2 text-sm font-bold text-black transition-all hover:bg-blue-50 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] active:scale-95">
+            <Link href="/onboarding">
+            <button  className="relative inline-flex items-center justify-center rounded-full bg-white px-6 py-2 text-sm font-bold text-black transition-all hover:bg-blue-50 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] active:scale-95">
               Get Started
             </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
